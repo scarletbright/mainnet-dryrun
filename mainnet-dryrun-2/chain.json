@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cosmos/chain-registry/master/chain.schema.json",
+  "chain_name": "archway",
+  "status": "live",
+  "network_type": "testnet",
+  "website": "https://archway.io/",
+  "pretty_name": "Archway",
+  "chain_id": "mainnet-dry-run-2",
+  "bech32_prefix": "archway",
+  "daemon_name": "archwayd",
+  "node_home": "$HOME/.archway",
+  "key_algos": ["secp256k1"],
+  "slip44": 118,
+  "fees": {
+    "fee_tokens": [
+      {
+        "denom": "aarch"
+      }
+    ]
+  },
+  "staking": {
+    "staking_tokens": [
+      {
+        "denom": "aarch"
+      }
+    ]
+  },
+  "codebase": {
+    "git_repo": "https://github.com/archway-network/archway",
+    "recommended_version": "v1.0.0-rc1",
+    "binaries": {
+      "linux/amd64": "https://github.com/archway-network/archway/releases/download/v1.0.0-rc1/archwayd_linux_amd64",
+      "linux/arm64": "https://github.com/archway-network/archway/releases/download/v1.0.0-rc1/archwayd_linux_arm64"
+    },
+    "cosmos_sdk_version": "v0.45.16",
+    "tendermint_version": "v0.34.27",
+    "cosmwasm_version": "v0.32.0",
+    "cosmwasm_enabled": true,
+    "ibc_go_version": "v4.3.1",
+    "genesis": {
+      "genesis_url": "https://github.com/archway-network/mainnet-dryrun/raw/main/mainnet-dryrun-2/init_genesis.json.gz"
+    },
+    "versions": [
+      {
+        "name": "v1.0.0-rc1",
+        "tag": "v1.0.0-rc1",
+        "height": 1
+      }
+    ]
+  },
+  "peers": {
+    "seeds": [
+      {
+        "id": "e4669ea649f8ece90fe340136f853a015f81d1c5",
+        "address": "34.133.237.198:26656",
+        "provider": "Archway Foundation"
+      }
+    ],
+    "persistent_peers": [
+      {
+        "id": "7d07adcb618257294b6b128f71bf0d9c4fec16ef",
+        "address": "34.72.239.70:26656",
+        "provider": "Archway Foundation"
+      },
+      {
+        "id": "f512523ba96cd14c6fde6ad749b0966d222e8079",
+        "address": "34.173.251.101:26656",
+        "provider": "Archway Foundation"
+      },
+      {
+        "id": "7ac4d6228ca5cf80a8815e122baefed245b9a253",
+        "address": "35.184.56.139:26656",
+        "provider": "Archway Foundation"
+      }
+    ]
+  },
+  "apis": {
+    "rpc": [
+      {
+        "address": "https://rpc.mainnet-dryrun-2.archway.tech",
+        "provider": "Archway Foundation"
+      }
+    ],
+    "rest": [
+      {
+        "address": "https://api.mainnet-dryrun-2.archway.tech",
+        "provider": "Archway Foundation"
+      }
+    ],
+    "grpc": [
+      {
+        "address": "grpc.mainnet-dryrun-2.archway.tech:443",
+        "provider": "Archway Foundation"
+      }
+    ]
+  },
+  "explorers": [
+    {
+      "kind": "Nodes Guru",
+      "url": "https://archway.explorers.guru/",
+      "tx_page": "https://archway.explorers.guru/transaction/${txHash}",
+      "account_page": "https://archway.explorers.guru/account/${accountAddress}"
+    }
+  ]
+}

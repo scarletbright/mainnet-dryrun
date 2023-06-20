@@ -1,0 +1,30 @@
+{
+  "$schema": "../ibc_data_schema.json",
+  "chain_1": {
+    "chain_name": "mainnet-dry-run-2",
+    "client_id": "07-tendermint-4",
+    "connection_id": "connection-3"
+  },
+  "chain_2": {
+    "chain_name": "evmos_9000-4",
+    "client_id": "07-tendermint-121",
+    "connection_id": "connection-133"
+  },
+  "channels": [
+    {
+      "chain_1": {
+        "channel_id": "channel-3",
+        "port_id": "transfer"
+      },
+      "chain_2": {
+        "channel_id": "channel-156",
+        "port_id": "transfer"
+      },
+      "ordering": "unordered",
+      "version": "ics20-1",
+      "tags": {
+        "status": "live"
+      }
+    }
+  ]
+}

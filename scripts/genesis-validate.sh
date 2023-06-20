@@ -50,7 +50,7 @@ fi
 echo "Collecting gentx"
 trap "$($ARCHD collect-gentxs --home $ARCHDIR >> $LOGS_FILE 2>&1)" EXIT
 if grep failed $LOGS_FILE; then
-  cat $LOGS_FILE |tail -n1
+  tail -n1 $LOGS_FILE 
   exit 1
 fi
 
@@ -58,7 +58,7 @@ fi
 echo "Validating genesis"
 trap "$($ARCHD validate-genesis --home $ARCHDIR >> $LOGS_FILE 2>&1)" EXIT
 if grep failed $LOGS_FILE; then
-  cat $LOGS_FILE |tail -n1
+  tail -n1 $LOGS_FILE
   exit 1
 fi
 
@@ -74,7 +74,7 @@ while true; do
   fi
   # check for panics
   if  grep panic: $LOGS_FILE; then
-    cat $LOGS_FILE |tail -n1
+    tail -n1 $LOGS_FILE
     echo "Panic found in log"
     exit 1
   fi
@@ -87,4 +87,4 @@ kill $(pgrep archwayd)
 
 echo "Gentx is valid"
 # echo last lines of log
-cat $LOGS_FILE |tail -n5
+tail -n5 $LOGS_FILE

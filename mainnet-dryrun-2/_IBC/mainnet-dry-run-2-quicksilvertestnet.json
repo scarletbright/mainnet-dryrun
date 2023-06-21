@@ -2,22 +2,22 @@
   "$schema": "../ibc_data_schema.json",
   "chain_1": {
     "chain_name": "mainnet-dry-run-2",
-    "client_id": "07-tendermint-7",
-    "connection_id": "connection-6"
+    "client_id": "07-tendermint-11",
+    "connection_id": "connection-17"
   },
   "chain_2": {
     "chain_name": "rhye-1",
-    "client_id": "07-tendermint-155",
-    "connection_id": "connection-6"
+    "client_id": "07-tendermint-14",
+    "connection_id": "connection-11"
   },
   "channels": [
     {
       "chain_1": {
-        "channel_id": "channel-6",
+        "channel_id": "channel-7",
         "port_id": "transfer"
       },
       "chain_2": {
-        "channel_id": "channel-155",
+        "channel_id": "channel-34",
         "port_id": "transfer"
       },
       "ordering": "unordered",

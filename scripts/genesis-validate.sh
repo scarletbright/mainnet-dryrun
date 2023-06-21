@@ -48,7 +48,7 @@ fi
 
 # collect gentx
 echo "Collecting gentx"
-trap "$($ARCHD collect-gentxs --home $ARCHDIR >> $LOGS_FILE 2>&1)" EXIT
+$ARCHD collect-gentxs --home $ARCHDIR >> $LOGS_FILE 2>&1 || true
 if grep failed $LOGS_FILE; then
   tail -n1 $LOGS_FILE 
   exit 1
@@ -56,7 +56,7 @@ fi
 
 # validate genesis
 echo "Validating genesis"
-trap "$($ARCHD validate-genesis --home $ARCHDIR >> $LOGS_FILE 2>&1)" EXIT
+$ARCHD validate-genesis --home $ARCHDIR >> $LOGS_FILE 2>&1 || true
 if grep failed $LOGS_FILE; then
   tail -n1 $LOGS_FILE
   exit 1
